@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,6 +8,8 @@
 
   <h1>My Simulated Day</h1>
   <div id="output" style="margin-top: 40px; font-size: 1.5rem;"></div>
+
+  <!-- GitHub Repo: https://github.com/NikkiDunlap/cs81-module7a-dailysim -->
 
   <script>
     const output = document.getElementById("output");
@@ -22,6 +23,7 @@
       }, delay);
     }
 
+    // Schedule starts — each delay is cumulative
     addActivity("⏰ 6:30 AM – Wake up and scroll TikTok half-asleep", 1000);
     addActivity("🧘‍♀️ 7:00 AM – Meditate and try not to fall back asleep", 3000);
     addActivity("📚 8:00 AM – Head to class and mentally prepare for pop quizzes", 5000);
@@ -29,10 +31,12 @@
     addActivity("🎧 4:00 PM – Produce some beats in FL Studio", 9000);
     addActivity("🍜 6:30 PM – Eat ramen and vibe to lofi", 11000);
 
+    // Twist: surprise mood at 8:00 PM
     const moods = ["😴", "😤", "🤩", "🤯", "🥹"];
     const randomMood = moods[Math.floor(Math.random() * moods.length)];
     addActivity(`🌙 8:00 PM – Reflect on the day... Mood: ${randomMood}`, 13000);
 
+    // Final message
     addActivity("🛌 11:00 PM – Finally knock out, dreaming of deadlines 😵‍💫", 15000);
   </script>
 
