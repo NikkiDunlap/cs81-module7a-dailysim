@@ -1,1 +1,40 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Daily Schedule Simulation</title>
+</head>
+<body style="font-family: sans-serif; text-align: center; padding-top: 60px; background-color: #eef;">
+
+  <h1>My Simulated Day</h1>
+  <div id="output" style="margin-top: 40px; font-size: 1.5rem;"></div>
+
+  <script>
+    const output = document.getElementById("output");
+
+    function addActivity(message, delay) 
+    {
+      setTimeout(() => {
+        const p = document.createElement("p");
+        p.textContent = message;
+        output.appendChild(p);
+      }, delay);
+    }
+
+    addActivity("⏰ 6:30 AM – Wake up and scroll TikTok half-asleep", 1000);
+    addActivity("🧘‍♀️ 7:00 AM – Meditate and try not to fall back asleep", 3000);
+    addActivity("📚 8:00 AM – Head to class and mentally prepare for pop quizzes", 5000);
+    addActivity("💻 12:00 PM – Code session with lots of debugging and coffee", 7000);
+    addActivity("🎧 4:00 PM – Produce some beats in FL Studio", 9000);
+    addActivity("🍜 6:30 PM – Eat ramen and vibe to lofi", 11000);
+
+    const moods = ["😴", "😤", "🤩", "🤯", "🥹"];
+    const randomMood = moods[Math.floor(Math.random() * moods.length)];
+    addActivity(`🌙 8:00 PM – Reflect on the day... Mood: ${randomMood}`, 13000);
+
+    addActivity("🛌 11:00 PM – Finally knock out, dreaming of deadlines 😵‍💫", 15000);
+  </script>
+
+</body>
+</html>
